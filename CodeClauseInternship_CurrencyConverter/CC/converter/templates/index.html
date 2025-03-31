@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Currency Converter</h2>
+
+    <form method="POST" action="{% url 'convert_currency' %}">
+        {% csrf_token %}
+
+        <div class="input-group">
+            <label>Amount 1:</label>
+            <input type="number" step="0.01" name="amount1" id="amount1" 
+                   value="{{ amount1|default:'' }}" placeholder="Enter amount">
+        </div>
+
+        <div class="input-group">
+            <label>From Currency:</label>
+            <select name="from_currency">
+                <option value="USD" {% if from_currency == 'USD' %}selected{% endif %}>US Dollar (USD)</option>
+                <option value="EUR" {% if from_currency == 'EUR' %}selected{% endif %}>Euro (EUR)</option>
+                <option value="INR" {% if from_currency == 'INR' %}selected{% endif %}>Indian Rupee (INR)</option>
+                <option value="GBP" {% if from_currency == 'GBP' %}selected{% endif %}>British Pound (GBP)</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>To Currency:</label>
+            <select name="to_currency">
+                <option value="USD" {% if to_currency == 'USD' %}selected{% endif %}>US Dollar (USD)</option>
+                <option value="EUR" {% if to_currency == 'EUR' %}selected{% endif %}>Euro (EUR)</option>
+                <option value="INR" {% if to_currency == 'INR' %}selected{% endif %}>Indian Rupee (INR)</option>
+                <option value="GBP" {% if to_currency == 'GBP' %}selected{% endif %}>British Pound (GBP)</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Amount 2:</label>
+            <input type="number" step="0.01" name="amount2" id="amount2" 
+                   value="{{ amount2|default:'' }}" placeholder="Converted amount">
+        </div>
+
+        <button type="submit">Convert</button>
+    </form>
+
+    {% if exchange_rate %}
+        <div>
+            Exchange Rate: <strong>{{ exchange_rate }}</strong>
+        </div>
+    {% endif %}
+
+{% endblock %}
