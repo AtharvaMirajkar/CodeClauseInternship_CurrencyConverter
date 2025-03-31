@@ -48,7 +48,7 @@ This project is a simple currency converter that allows users to input an amount
    ```
 
 ## UI Snapshot
-./CC_snap.png
+![alt text](http://github.com/AtharvaMirajkar/CodeClauseInternship_CurrencyConverter/blob/main/CC_snap.png)
 
 ## What I Learnt
 - Handling user input
