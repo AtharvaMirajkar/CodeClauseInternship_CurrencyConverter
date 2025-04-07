@@ -64,18 +64,40 @@ Go to `http://127.0.0.1:8000` in your browser.
 ## ⚙️ Project Structure
 
 ```
-currency_converter/
-├── converter/          # Django app
-│   ├── templates/
-│   ├── views.py
-│   ├── urls.py
-│   └── ...
-├── currency_converter/ # Project settings
-│   ├── settings.py
-│   └── ...
-├── manage.py
-├── requirements.txt
+.
+├── CC_snap.png
+├── CurrencyConverter     # project folder
+│   └── CC # django project file
+│       ├── CC     # main django folder
+│       │   ├── __init__.py
+│       │   ├── asgi.py
+│       │   ├── settings.py
+│       │   ├── urls.py
+│       │   └── wsgi.py
+│       ├── converter     # app folder
+│       │   ├── __init__.py
+│       │   ├── admin.py
+│       │   ├── apps.py
+│       │   ├── migrations
+│       │   │   └── __init__.py
+│       │   ├── models.py
+│       │   ├── static
+│       │   │   ├── css
+│       │   │   │   └── style.css
+│       │   │   └── favicon.ico
+│       │   ├── templates
+│       │   │   ├── base.html
+│       │   │   ├── converter.html
+│       │   │   └── index.html
+│       │   ├── tests.py
+│       │   ├── urls.py
+│       │   └── views.py
+│       ├── db.sqlite3
+│       ├── manage.py
+│       └── requirements.txt
+├── LICENSE
 └── README.md
+
 ```
 
 ---
