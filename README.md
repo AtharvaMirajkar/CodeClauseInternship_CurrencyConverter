@@ -1,63 +1,121 @@
-# Currency Converter
+---
 
-## Project Details
+# 💱 Currency Converter
 
-- **Project ID:** #CC9886
-- **Project Title:** Currency Converter
-- **Internship Domain:** Python Development Intern
-- **Project Level:** Entry Level
-- **Assigned By:** CodeClause Internship
-- **Assigned To:**
-- **Start Date:** _1st March 2025_
-- **End Date:** _31st March 2025_
+A simple and user-friendly Currency Converter built with Python and Django. This application allows users to convert values between two selected currencies based on real-time exchange rates.
 
-## Aim
-Create a currency converter that converts amounts between different currencies.
+---
 
-## Description
-This project is a simple currency converter that allows users to input an amount and select a currency to convert to another currency using real-time exchange rates.
+## 🌐 Features
 
-## Technologies Used
-- Python
-- Django
-- APIs (ExchangeRate API)
+- Convert currency values from one currency to another
+- Real-time exchange rate fetching
+- Bi-directional conversion (Currency 1 → Currency 2 and vice versa)
+- Dropdown selection of multiple currencies (e.g., INR, USD, EUR, GBP)
+- Simple and clean UI with an intuitive form
+- Displays exchange rate as an integer
 
-## Features
-- User input for amount and currencies
-- Fetches live exchange rates
-- Converts currency accurately
-- Displays results in a user-friendly format
+---
 
-## Easy Installation Steps
-1. **Download Python** (if not installed) from [python.org](https://www.python.org/downloads/).
-2. **Clone the repository:**
-   ```sh
-   git clone https://github.com/AtharvaMirajkar/CodeClauseInternship_CurrencyConverter.git
-   ```
-3. **Go to the project directory:**
-   ```sh
-   cd CC
-   ```
-4. **Install dependencies:**
-   ```sh
-   pip install -r requirements.txt
-   ```
-5. **Run the script:**
-   ```sh
-   python manage.py runserver
-   ```
+## 🛠 Tech Stack
 
-## UI Snapshot
-![UI's Image](http://github.com/AtharvaMirajkar/CodeClauseInternship_CurrencyConverter/blob/main/CC_snap.png?raw=True)
+- **Frontend**: HTML, CSS (via Django templates)
+- **Backend**: Python, Django
+- **API**: Exchange rate data via an external API ([ExchangeRate-API](https://www.exchangerate-api.com/))
 
-## What I Learnt
-- Handling user input
-- Basic mathematical operations
-- Currency conversion logic
-- API integration (if used for real-time rates)
+---
 
-## Contributing
-Feel free to fork this repository and contribute improvements!
+## 📸 Screenshots
 
-## License
-This project is licensed under the MIT License.
+![Currency Converter Screenshot](./CC_snap.png)
+
+
+---
+
+## 🚀 How to Run Locally
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/AtharvaMirajkar/CurrencyConverter.git
+cd currency-converter
+```
+
+### 2. Create Virtual Environment (optional but recommended)
+```bash
+python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+```
+
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the Django Server
+```bash
+python manage.py runserver
+```
+
+### 5. Access the App
+Go to `http://127.0.0.1:8000` in your browser.
+
+---
+
+## ⚙️ Project Structure
+
+```
+currency_converter/
+├── converter/          # Django app
+│   ├── templates/
+│   ├── views.py
+│   ├── urls.py
+│   └── ...
+├── currency_converter/ # Project settings
+│   ├── settings.py
+│   └── ...
+├── manage.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 📈 Future Improvements
+
+- Add support for historical exchange rate tracking
+- Add currency symbols and flags
+- Implement currency charts and analytics
+- Mobile-friendly responsive UI
+
+---
+
+## 📄 License
+This project is licensed under the **MIT** License.
+Feel free to use, share, and modify it as needed.
+
+---
+
+## 🙌 Acknowledgements
+
+- [Django](https://www.djangoproject.com/)
+- [ExchangeRate-API](https://www.exchangerate-api.com/)
+- Open-source community ❤️
+
+---
+
+## 🤝 Contributing
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+## 📬 Contact
+
+If you have any suggestions, feedback, or would like to contribute, feel free to connect!
+
+**Developer**: Atharva Mirajkar
+**Email**: _atharva.r.mirajkar@gmail.com_  
+**Linkedin**: _https://www.linkedin.com/in/mirajkar-atharva/_
+
+---
+
+## Thank You ❤️
